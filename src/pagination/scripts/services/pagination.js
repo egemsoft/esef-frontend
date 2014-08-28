@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('esef.frontend.pagination')
   /**
    * @ngdoc service
