@@ -8,7 +8,6 @@
  */
 
 angular.module('esef.frontend.storage', []);
-
 angular.module('esef.frontend.storage')
   /**
    * @ngdoc service

@@ -12,11 +12,10 @@ angular.module('esef.frontend', [
     'esef.frontend.pagination'
   ]);
 angular.module('esef.frontend.pagination', []);
-
 angular.module('esef.frontend.pagination')
   /**
    * @ngdoc service
-   * @name lolWebapp.services:pagination
+   * @name esef.frontend.pagination:pagination
    * @description
    * Pagination helper service. Makes calculations for current page, offset fix, number of pages and displayed page numbers.
    * @function
@@ -29,7 +28,7 @@ angular.module('esef.frontend.pagination')
       /**
        * @ngdoc object
        * @name getFixedOffset
-       * @methodOf lolWebapp.services:pagination
+       * @methodOf esef.frontend.pagination:pagination
        * @description
        * Fixes data offset if it is beyond the count + active page size.
        * @param {number} offfset    - Data offset.
@@ -45,7 +44,7 @@ angular.module('esef.frontend.pagination')
       /**
        * @ngdoc object
        * @name getNumberOfPages
-       * @methodOf lolWebapp.services:pagination
+       * @methodOf esef.frontend.pagination:pagination
        * @description
        * Returns total number of pages.
        * @param {number} size       - Number of entries displayed on each page.
@@ -64,7 +63,7 @@ angular.module('esef.frontend.pagination')
       /**
        * @ngdoc object
        * @name getNumberOfPages
-       * @methodOf lolWebapp.services:pagination
+       * @methodOf esef.frontend.pagination:pagination
        * @description
        * Calculates and returns current page number.
        * @param {number} offfset    - Data offset.
@@ -84,7 +83,7 @@ angular.module('esef.frontend.pagination')
       /**
        * @ngdoc object
        * @name getPages
-       * @methodOf lolWebapp.services:pagination
+       * @methodOf esef.frontend.pagination:pagination
        * @description
        * Calculates displayed page numbers and constructs them in an array.
        * @param {number} currentPage       - Active page number being displayed.
@@ -119,7 +118,6 @@ angular.module('esef.frontend.pagination')
     };
   });
 angular.module('esef.frontend.storage', []);
-
 angular.module('esef.frontend.storage')
   /**
    * @ngdoc service
