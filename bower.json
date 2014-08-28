@@ -8,7 +8,7 @@
   },
   "description": "Reuseable Angular JS components.",
   "main": [
-    "dist/js/esef-frontend.js"
+    "dist/bundle/esef-frontend.js"
   ],
   "keywords": [
     "esef",
