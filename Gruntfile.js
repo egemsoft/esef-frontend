@@ -119,7 +119,7 @@ module.exports = function (grunt) {
         html5Mode: false,
         title: '<%= appConfig.name %> Documentation'
       },
-      all: ['<%= appConfig.app %>/{,*/}scripts/{,*/}*.js']
+      all: ['<%= appConfig.app %>/{,*/}{,scripts/}{,*/}*.js']
     }
   });
 

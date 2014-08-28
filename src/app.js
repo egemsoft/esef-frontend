@@ -3,6 +3,8 @@
 /**
  * @ngdoc overview
  * @name esef.frontend
+ * @requires esef.frontend.pagination
+ * @requires esef.frontend.storage
  * @description
  * Main module holding everything together.
  * @function

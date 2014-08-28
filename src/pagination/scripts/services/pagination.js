@@ -3,7 +3,7 @@
 angular.module('esef.frontend.pagination')
   /**
    * @ngdoc service
-   * @name esef.frontend.pagination:pagination
+   * @name esef.frontend.pagination.services:pagination
    * @description
    * Pagination helper service. Makes calculations for current page, offset fix, number of pages and displayed page numbers.
    * @function
@@ -16,7 +16,7 @@ angular.module('esef.frontend.pagination')
       /**
        * @ngdoc object
        * @name getFixedOffset
-       * @methodOf esef.frontend.pagination:pagination
+       * @methodOf esef.frontend.pagination.services:pagination
        * @description
        * Fixes data offset if it is beyond the count + active page size.
        * @param {number} offfset    - Data offset.
@@ -32,7 +32,7 @@ angular.module('esef.frontend.pagination')
       /**
        * @ngdoc object
        * @name getNumberOfPages
-       * @methodOf esef.frontend.pagination:pagination
+       * @methodOf esef.frontend.pagination.services:pagination
        * @description
        * Returns total number of pages.
        * @param {number} size       - Number of entries displayed on each page.
@@ -51,7 +51,7 @@ angular.module('esef.frontend.pagination')
       /**
        * @ngdoc object
        * @name getNumberOfPages
-       * @methodOf esef.frontend.pagination:pagination
+       * @methodOf esef.frontend.pagination.services:pagination
        * @description
        * Calculates and returns current page number.
        * @param {number} offfset    - Data offset.
@@ -71,7 +71,7 @@ angular.module('esef.frontend.pagination')
       /**
        * @ngdoc object
        * @name getPages
-       * @methodOf esef.frontend.pagination:pagination
+       * @methodOf esef.frontend.pagination.services:pagination
        * @description
        * Calculates displayed page numbers and constructs them in an array.
        * @param {number} currentPage       - Active page number being displayed.

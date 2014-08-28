@@ -5,6 +5,15 @@ NG_DOCS={
   "pages": [
     {
       "section": "api",
+      "id": "esef.frontend",
+      "shortName": "esef.frontend",
+      "type": "overview",
+      "moduleName": "esef.frontend",
+      "shortDescription": "Main module holding everything together.",
+      "keywords": "api demirbilek esef frontend holding main module overview pagination storage"
+    },
+    {
+      "section": "api",
       "id": "esef.frontend.pagination",
       "shortName": "esef.frontend.pagination",
       "type": "overview",
@@ -14,12 +23,12 @@ NG_DOCS={
     },
     {
       "section": "api",
-      "id": "esef.frontend.pagination:pagination",
+      "id": "esef.frontend.pagination.services:pagination",
       "shortName": "pagination",
       "type": "service",
-      "moduleName": "esef.frontend",
+      "moduleName": "esef.frontend.pagination",
       "shortDescription": "Pagination helper service. Makes calculations for current page, offset fix, number of pages and displayed page numbers.",
-      "keywords": "active api array calculates calculations constructs count current currentpage data demirbilek displayed entries esef fixed fixes frontend getfixedoffset getnumberofpages getpages helper left number numbers object offfset offset pagination paginationoffset returns service size total totalpages"
+      "keywords": "active api array calculates calculations constructs count current currentpage data demirbilek displayed entries esef fixed fixes frontend getfixedoffset getnumberofpages getpages helper left number numbers object offfset offset pagination paginationoffset returns service services size total totalpages"
     },
     {
       "section": "api",

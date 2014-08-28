@@ -48,7 +48,7 @@ All modules can also be used seperately. These modules are located under `/dist`
 
 ###Docs
 
-Documentations are available with [GitRaw]().
+Documentations are available with [GitRaw](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html).
 
 #Development
 ##Install
