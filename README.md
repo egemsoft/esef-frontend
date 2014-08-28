@@ -32,7 +32,7 @@ It's best to use bower to install.
 
 ```bash
  $ bower install esef-frontend
-```
+``
 
 ###Use Bundle
 
@@ -46,7 +46,7 @@ All modules will be available by using bundle package located on: `bower_compone
 
 All modules can also be used seperately. These modules are located under `/dist`.
 
-#Documentaion
+#Documentation
 
 Documentations are available with [GitRaw](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html).
 
