@@ -32,17 +32,23 @@ It's best to use bower to install.
 
 ```bash
  $ bower install esef-frontend
-```
+``
 
 ###Use Bundle
 
-All modules will be available by using bundle package located on:
+All modules will be available by using bundle package located on: `bower_components/esef-frontend/dist/bundle/esef-frontend.js`.
 
-`bower_components/esef-frontend/dist/bundle/esef-frontend.js`
+```js
+  angular.module('myApp', ['esef.frontend']);
+```
 
 ###Use Modules
 
 All modules can also be used seperately. These modules are located under `/dist`.
+
+###Docs
+
+Documentations are available with [GitRaw]().
 
 #Development
 ##Install
