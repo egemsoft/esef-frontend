@@ -22,7 +22,10 @@
     "bower_components",
     "test",
     "tests",
-    "src"
+    "src",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json"
   ],
   "dependencies": {
     "angular": "~1.2.23"
