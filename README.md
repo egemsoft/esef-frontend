@@ -32,7 +32,7 @@ It's best to use bower to install.
 
 ```bash
  $ bower install esef-frontend
-``
+```
 
 ###Use Bundle
 
