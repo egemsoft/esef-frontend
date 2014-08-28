@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         files: {
           '<%= appConfig.dist %>/bundle/esef-frontend.js': ['<%= appConfig.app %>/{,*/}{,scripts/}{,*/}*.js'],
           '<%= appConfig.dist %>/pagination/pagination.js': ['<%= appConfig.app %>/pagination/{,scripts/}{,*/}*.js'],
-        '<%= appConfig.dist %>/storage/storage.js': ['<%= appConfig.app %>/storage/{,scripts/}{,*/}*.js']
+          '<%= appConfig.dist %>/storage/storage.js': ['<%= appConfig.app %>/storage/{,scripts/}{,*/}*.js']
         }
       },
       css: {
