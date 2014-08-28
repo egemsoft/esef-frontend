@@ -46,7 +46,7 @@ All modules will be available by using bundle package located on: `bower_compone
 
 All modules can also be used seperately. These modules are located under `/dist`.
 
-###Docs
+#Documentaion
 
 Documentations are available with [GitRaw](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html).
 
