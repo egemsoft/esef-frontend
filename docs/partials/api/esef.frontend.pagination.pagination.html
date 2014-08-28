@@ -1,0 +1,73 @@
+<h1><code ng:non-bindable="">pagination</code>
+<div><span class="hint">service in module <code ng:non-bindable="">esef.frontend</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="esef-frontend-pagination-page esef-frontend-pagination-pagination-page"><p>Pagination helper service. Makes calculations for current page, offset fix, number of pages and displayed page numbers.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getfixedoffset">getFixedOffset(offfset, size, count)</h3>
+<div class="getfixedoffset"><div class="getfixedoffset-page"><p>Fixes data offset if it is beyond the count + active page size.</p>
+</div><h5 id="methods_getfixedoffset_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>offfset</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getfixedoffset-page"><ul>
+<li>Data offset.</li>
+</ul>
+</div></td></tr><tr><td>size</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getfixedoffset-page"><ul>
+<li>Number of entries displayed on each page.</li>
+</ul>
+</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getfixedoffset-page"><ul>
+<li>Total data count.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getfixedoffset_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getfixedoffset-page"><ul>
+<li>Fixed offset.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getnumberofpages">getNumberOfPages(size, count)</h3>
+<div class="getnumberofpages"><div class="getnumberofpages-page"><p>Returns total number of pages.</p>
+</div><h5 id="methods_getnumberofpages_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>size</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getnumberofpages-page"><ul>
+<li>Number of entries displayed on each page.</li>
+</ul>
+</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getnumberofpages-page"><ul>
+<li>Total data count.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getnumberofpages_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getnumberofpages-page"><ul>
+<li>Number of pages.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getnumberofpages">getNumberOfPages(offfset, size, totalPages)</h3>
+<div class="getnumberofpages"><div class="getnumberofpages-page"><p>Calculates and returns current page number.</p>
+</div><h5 id="methods_getnumberofpages_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>offfset</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getnumberofpages-page"><ul>
+<li>Data offset.</li>
+</ul>
+</div></td></tr><tr><td>size</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getnumberofpages-page"><ul>
+<li>Number of entries displayed on each page.</li>
+</ul>
+</div></td></tr><tr><td>totalPages</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getnumberofpages-page"><ul>
+<li>Total number of pages.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getnumberofpages_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getnumberofpages-page"><ul>
+<li>Active page number.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getpages">getPages(currentPage, totalPages, paginationOffset)</h3>
+<div class="getpages"><div class="getpages-page"><p>Calculates displayed page numbers and constructs them in an array.</p>
+</div><h5 id="methods_getpages_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>currentPage</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getpages-page"><ul>
+<li>Active page number being displayed.</li>
+</ul>
+</div></td></tr><tr><td>totalPages</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getpages-page"><ul>
+<li>Total number of pages.</li>
+</ul>
+</div></td></tr><tr><td>paginationOffset</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getpages-page"><ul>
+<li>Number of pages to be displayed beginning from current page on left and right.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getpages_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="getpages-page"><ul>
+<li>Page numbers array.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

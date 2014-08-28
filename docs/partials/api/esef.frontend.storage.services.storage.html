@@ -1,0 +1,85 @@
+<h1><code ng:non-bindable="">storage</code>
+<div><span class="hint">service in module <code ng:non-bindable="">esef.frontend.storage</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="esef-frontend-storage-services-page esef-frontend-storage-services-storage-page"><p>Storage service which stores key/value objects and notifies changes with observer pattern.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_get">get()</h3>
+<div class="get"><div class="get-page"><p>Get method for storage service.</p>
+</div><h5 id="methods_get_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="get-page"><ul>
+<li>Desired object stored on given key.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_notifyobservers">notifyObservers()</h3>
+<div class="notifyobservers"><div class="notifyobservers-page"><p>Notifies registered observers by running callbacks.</p>
+</div><h5 id="methods_notifyobservers_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="notifyobservers-page"><ul>
+<li>Storage service.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_registerobservercallback">registerObserverCallback(callback)</h3>
+<div class="registerobservercallback"><div class="registerobservercallback-page"><p>Registers callback to observe changes on service</p>
+</div><h5 id="methods_registerobservercallback_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="registerobservercallback-page"><ul>
+<li>Observer callback function</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_registerobservercallback_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="registerobservercallback-page"><ul>
+<li>storage service.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_removefilter">removeFilter(key, key)</h3>
+<div class="removefilter"><div class="removefilter-page"><p>Remove a single property on given object. Calls registered callback functions to inform about the change.</p>
+</div><h5 id="methods_removefilter_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="removefilter-page"><ul>
+<li>Object key.</li>
+</ul>
+</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="removefilter-page"><ul>
+<li>Property key stored on given object key.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_removefilter_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="removefilter-page"><ul>
+<li>storage service.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_set">set(key, newValues)</h3>
+<div class="set"><div class="set-page"><p>Store method for storage. Stores given object with given key. Calls registered callback functions to inform about the change.</p>
+</div><h5 id="methods_set_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="set-page"><ul>
+<li>Storage key.</li>
+</ul>
+</div></td></tr><tr><td>newValues</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="set-page"><ul>
+<li>Object to be stored on given key.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_set_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="set-page"><ul>
+<li>storage service.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_set">set()</h3>
+<div class="set"><div class="set-page"><p>Set method for storage service. Sets given object as storage.</p>
+</div><h5 id="methods_set_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="set-page"><ul>
+<li>storage service.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setfilter">setFilter(key, propKey, val)</h3>
+<div class="setfilter"><div class="setfilter-page"><p>Set method for single property on given key. Calls registered callback functions to inform about the change.</p>
+</div><h5 id="methods_setfilter_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setfilter-page"><ul>
+<li>Object key.</li>
+</ul>
+</div></td></tr><tr><td>propKey</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setfilter-page"><ul>
+<li>Property key on desired object.</li>
+</ul>
+</div></td></tr><tr><td>val</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setfilter-page"><ul>
+<li>New value to be set.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_setfilter_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setfilter-page"><ul>
+<li>storage service.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>
