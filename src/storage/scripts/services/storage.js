@@ -90,7 +90,7 @@ angular.module('esef.frontend.storage')
        * @description
        * Get method for storage service.
        * @param {string}  key - Key of desired object.
-       * @return {string}     - Desired object stored on given key.
+       * @return {object}     - Desired object stored on given key.
        * @function
        */
       get: function(key) {
