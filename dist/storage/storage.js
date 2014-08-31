@@ -2,7 +2,7 @@
 /*!
  * esef-frontend - v1.0.0
  * https://github.com/egemsoft/esef-frontend
- * 2014-08-28
+ * 2014-08-31
  * Author: İsmail Demirbilek
  * Copyright (c) 2014 Egemsoft * License: MIT
  */

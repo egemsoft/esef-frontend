@@ -50,7 +50,7 @@ angular.module('esef.frontend.pagination')
 
       /**
        * @ngdoc object
-       * @name getNumberOfPages
+       * @name getCurrentPage
        * @methodOf esef.frontend.pagination.services:pagination
        * @description
        * Calculates and returns current page number.
