@@ -136,13 +136,13 @@ module.exports = function (grunt) {
     // 'concat:css',
     'ngmin',
     // 'cssmin',
-    'uglify'
+    'uglify',
+    'ngdocs'
   ]);
 
   grunt.registerTask('default', [
     'test',
-    'build',
-    'ngdocs'
+    'build'
   ]);
 
 };
