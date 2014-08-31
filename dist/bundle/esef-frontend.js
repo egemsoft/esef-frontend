@@ -133,7 +133,7 @@ angular.module('esef.frontend.storage')
     return {
       /**
        * @ngdoc object
-       * @name set
+       * @name store
        * @methodOf esef.frontend.storage.services:storage
        * @description
        * Store method for storage. Stores given object with given key. Calls registered callback functions to inform about the change.
@@ -151,7 +151,7 @@ angular.module('esef.frontend.storage')
 
       /**
        * @ngdoc object
-       * @name setFilter
+       * @name setProperty
        * @methodOf esef.frontend.storage.services:storage
        * @description
        * Set method for single property on given key. Calls registered callback functions to inform about the change.
@@ -170,7 +170,7 @@ angular.module('esef.frontend.storage')
 
       /**
        * @ngdoc object
-       * @name removeFilter
+       * @name removeProperty
        * @methodOf esef.frontend.storage.services:storage
        * @description
        * Remove a single property on given object. Calls registered callback functions to inform about the change.
@@ -207,7 +207,8 @@ angular.module('esef.frontend.storage')
        * @methodOf esef.frontend.storage.services:storage
        * @description
        * Get method for storage service.
-       * @return {string} - Desired object stored on given key.
+       * @param {string}  key - Key of desired object.
+       * @return {string}     - Desired object stored on given key.
        * @function
        */
       get: function(key) {
@@ -219,7 +220,7 @@ angular.module('esef.frontend.storage')
        * @name registerObserverCallback
        * @methodOf esef.frontend.storage.services:storage
        * @description
-       * Registers callback to observe changes on service
+       * Registers callback to observe changes on service.
        * @param {function} callback - Observer callback function
        * @return {object}           - storage service.
        * @function
