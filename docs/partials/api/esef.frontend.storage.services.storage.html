@@ -7,9 +7,12 @@
 <div class="description"><div class="esef-frontend-storage-services-page esef-frontend-storage-services-storage-page"><p>Storage service which stores key/value objects and notifies changes with observer pattern.</p>
 </div></div>
 <div class="member method"><h2 id="methods">Methods</h2>
-<ul class="methods"><li><h3 id="methods_get">get()</h3>
+<ul class="methods"><li><h3 id="methods_get">get(key)</h3>
 <div class="get"><div class="get-page"><p>Get method for storage service.</p>
-</div><h5 id="methods_get_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="get-page"><ul>
+</div><h5 id="methods_get_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="get-page"><ul>
+<li>Key of desired object.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_get_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="get-page"><ul>
 <li>Desired object stored on given key.</li>
 </ul>
 </div></td></tr></table></div>
@@ -22,7 +25,7 @@
 </div></td></tr></table></div>
 </li>
 <li><h3 id="methods_registerobservercallback">registerObserverCallback(callback)</h3>
-<div class="registerobservercallback"><div class="registerobservercallback-page"><p>Registers callback to observe changes on service</p>
+<div class="registerobservercallback"><div class="registerobservercallback-page"><p>Registers callback to observe changes on service.</p>
 </div><h5 id="methods_registerobservercallback_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="registerobservercallback-page"><ul>
 <li>Observer callback function</li>
 </ul>
@@ -31,28 +34,15 @@
 </ul>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_removefilter">removeFilter(key, key)</h3>
-<div class="removefilter"><div class="removefilter-page"><p>Remove a single property on given object. Calls registered callback functions to inform about the change.</p>
-</div><h5 id="methods_removefilter_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="removefilter-page"><ul>
+<li><h3 id="methods_removeproperty">removeProperty(key, key)</h3>
+<div class="removeproperty"><div class="removeproperty-page"><p>Remove a single property on given object. Calls registered callback functions to inform about the change.</p>
+</div><h5 id="methods_removeproperty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="removeproperty-page"><ul>
 <li>Object key.</li>
 </ul>
-</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="removefilter-page"><ul>
+</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="removeproperty-page"><ul>
 <li>Property key stored on given object key.</li>
 </ul>
-</div></td></tr></tbody></table><h5 id="methods_removefilter_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="removefilter-page"><ul>
-<li>storage service.</li>
-</ul>
-</div></td></tr></table></div>
-</li>
-<li><h3 id="methods_set">set(key, newValues)</h3>
-<div class="set"><div class="set-page"><p>Store method for storage. Stores given object with given key. Calls registered callback functions to inform about the change.</p>
-</div><h5 id="methods_set_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="set-page"><ul>
-<li>Storage key.</li>
-</ul>
-</div></td></tr><tr><td>newValues</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="set-page"><ul>
-<li>Object to be stored on given key.</li>
-</ul>
-</div></td></tr></tbody></table><h5 id="methods_set_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="set-page"><ul>
+</div></td></tr></tbody></table><h5 id="methods_removeproperty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="removeproperty-page"><ul>
 <li>storage service.</li>
 </ul>
 </div></td></tr></table></div>
@@ -64,18 +54,31 @@
 </ul>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_setfilter">setFilter(key, propKey, val)</h3>
-<div class="setfilter"><div class="setfilter-page"><p>Set method for single property on given key. Calls registered callback functions to inform about the change.</p>
-</div><h5 id="methods_setfilter_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setfilter-page"><ul>
+<li><h3 id="methods_setproperty">setProperty(key, propKey, val)</h3>
+<div class="setproperty"><div class="setproperty-page"><p>Set method for single property on given key. Calls registered callback functions to inform about the change.</p>
+</div><h5 id="methods_setproperty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setproperty-page"><ul>
 <li>Object key.</li>
 </ul>
-</div></td></tr><tr><td>propKey</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setfilter-page"><ul>
+</div></td></tr><tr><td>propKey</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setproperty-page"><ul>
 <li>Property key on desired object.</li>
 </ul>
-</div></td></tr><tr><td>val</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setfilter-page"><ul>
+</div></td></tr><tr><td>val</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setproperty-page"><ul>
 <li>New value to be set.</li>
 </ul>
-</div></td></tr></tbody></table><h5 id="methods_setfilter_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setfilter-page"><ul>
+</div></td></tr></tbody></table><h5 id="methods_setproperty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setproperty-page"><ul>
+<li>storage service.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_store">store(key, newValues)</h3>
+<div class="store"><div class="store-page"><p>Store method for storage. Stores given object with given key. Calls registered callback functions to inform about the change.</p>
+</div><h5 id="methods_store_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="store-page"><ul>
+<li>Storage key.</li>
+</ul>
+</div></td></tr><tr><td>newValues</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="store-page"><ul>
+<li>Object to be stored on given key.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_store_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="store-page"><ul>
 <li>storage service.</li>
 </ul>
 </div></td></tr></table></div>

@@ -28,7 +28,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "esef.frontend.pagination",
       "shortDescription": "Pagination helper service. Makes calculations for current page, offset fix, number of pages and displayed page numbers.",
-      "keywords": "active api array calculates calculations constructs count current currentpage data demirbilek displayed entries esef fixed fixes frontend getfixedoffset getnumberofpages getpages helper left number numbers object offfset offset pagination paginationoffset returns service services size total totalpages"
+      "keywords": "active api array calculates calculations constructs count current currentpage data demirbilek displayed entries esef fixed fixes frontend getcurrentpage getfixedoffset getnumberofpages getpages helper left number numbers object offfset offset pagination paginationoffset returns service services size total totalpages"
     },
     {
       "section": "api",
@@ -46,7 +46,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "esef.frontend.storage",
       "shortDescription": "Storage service which stores key/value objects and notifies changes with observer pattern.",
-      "keywords": "api callback callbacks calls change changes demirbilek desired esef frontend function functions inform key method newvalues notifies notifyobservers object objects observe observer observers pattern property propkey registered registerobservercallback registers remove removefilter running service services set setfilter sets single storage store stored stores val"
+      "keywords": "api callback callbacks calls change changes demirbilek desired esef frontend function functions inform key method newvalues notifies notifyobservers object objects observe observer observers pattern property propkey registered registerobservercallback registers remove removeproperty running service services set setproperty sets single storage store stored stores val"
     }
   ],
   "apis": {
