@@ -128,8 +128,11 @@ module.exports = function (grunt) {
     }
   });
 
-  // set concat and uglify files dynamically
-  (function setModuleTasks() {
+  // set concat and uglify files configs dynamically
+  grunt.registerTask('setConfigsForSubmodules', function() {
+    // generate modules.json with directories inside src
+    
+    // read generated modules list
     var modules = grunt.file.readJSON('modules.json');
     var concatFiles = grunt.config.get('concat.js.files');
     var uglifyFiles = grunt.config.get('uglify.dist.files');
@@ -141,7 +144,12 @@ module.exports = function (grunt) {
 
     grunt.config.set('concat.js.files', concatFiles);
     grunt.config.set('uglify.dist.files', uglifyFiles);
-  })();
+  });
+
+  grunt.registerTask('prepareBuild', [
+    'folder_list',
+    'setConfigsForSubmodules'
+  ]);
 
   grunt.registerTask('test', [
     'jshint',
@@ -151,7 +159,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'folder_list',
+    'prepareBuild',
     'clean:dist',
     'concat:js',
     // 'concat:css',
