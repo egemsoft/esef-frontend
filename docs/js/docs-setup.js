@@ -32,6 +32,24 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "esef.frontend.refresh",
+      "shortName": "esef.frontend.refresh",
+      "type": "overview",
+      "moduleName": "esef.frontend.refresh",
+      "shortDescription": "Refresh module for esef-frontend, provides refresh service.",
+      "keywords": "api demirbilek esef esef-frontend frontend module overview refresh service"
+    },
+    {
+      "section": "api",
+      "id": "esef.frontend.refresh.services:refresh",
+      "shortName": "refresh",
+      "type": "service",
+      "moduleName": "esef.frontend.refresh",
+      "shortDescription": "Refresh service implements a recursive periodical refresh function.",
+      "keywords": "api callback chaining default demirbilek easy esef false frontend function implements interval isstarted isstopped main method milliseconds object param period periodical periodically recursive refresh refreshing returns running service services set setinterval sets simple start started starts stops support takes terms timeout true"
+    },
+    {
+      "section": "api",
       "id": "esef.frontend.storage",
       "shortName": "esef.frontend.storage",
       "type": "overview",

@@ -2,11 +2,19 @@
 /*!
  * esef-frontend - v1.0.0
  * https://github.com/egemsoft/esef-frontend
- * 2014-08-31
- * Author: İsmail Demirbilek
- * Copyright (c) 2014 Egemsoft * License: MIT
+ * 2014-09-05
+ * Copyright (c) 2014 Egemsoft
+ * License: MIT
  */
 
+/**
+ * @ngdoc overview
+ * @name esef.frontend.pagination
+ * @description
+ * Pagination module for esef-frontend. Provides pagination service.
+ * @function
+ * @author İsmail Demirbilek
+ */
 angular.module('esef.frontend.pagination', []);
 angular.module('esef.frontend.pagination')
   /**

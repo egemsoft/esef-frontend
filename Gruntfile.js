@@ -15,8 +15,7 @@ module.exports = function (grunt) {
             ' * <%= pkg.name %> - v<%= pkg.version %>\n' +
             ' * <%= pkg.homepage %>\n' +
             ' * <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-            ' * Author: <%= pkg.author.name %>\n' +
-            ' * Copyright (c) <%= grunt.template.today("yyyy") %> Egemsoft' +
+            ' * Copyright (c) <%= grunt.template.today("yyyy") %> Egemsoft\n' +
             ' * License: <%= pkg.license %>\n' +
             ' */\n',
     concat: {
@@ -27,12 +26,13 @@ module.exports = function (grunt) {
           process: function(src) {
             return src.replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1');
           },
-          stripBanners: true
+          //stripBanners: true
         },
         files: {
           '<%= appConfig.dist %>/bundle/esef-frontend.js': ['<%= appConfig.app %>/{,*/}{,scripts/}{,*/}*.js'],
           '<%= appConfig.dist %>/pagination/pagination.js': ['<%= appConfig.app %>/pagination/{,scripts/}{,*/}*.js'],
-          '<%= appConfig.dist %>/storage/storage.js': ['<%= appConfig.app %>/storage/{,scripts/}{,*/}*.js']
+          '<%= appConfig.dist %>/storage/storage.js': ['<%= appConfig.app %>/storage/{,scripts/}{,*/}*.js'],
+          '<%= appConfig.dist %>/refresh/refresh.js': ['<%= appConfig.app %>/refresh/{,scripts/}{,*/}*.js']
         }
       },
       css: {
@@ -109,7 +109,8 @@ module.exports = function (grunt) {
         files: {
           '<%= appConfig.dist %>/bundle/esef-frontend.min.js': ['.tmp/bundle/**.js'],
           '<%= appConfig.dist %>/storage/storage.min.js': ['.tmp/storage/**.js'],
-          '<%= appConfig.dist %>/pagination/pagination.min.js': ['.tmp/pagination/**.js']
+          '<%= appConfig.dist %>/pagination/pagination.min.js': ['.tmp/pagination/**.js'],
+          '<%= appConfig.dist %>/refresh/refresh.min.js': ['.tmp/refresh/**.js']
         }
       }
     },

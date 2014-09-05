@@ -1,0 +1,54 @@
+<h1><code ng:non-bindable="">refresh</code>
+<div><span class="hint">service in module <code ng:non-bindable="">esef.frontend.refresh</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="esef-frontend-refresh-services-page esef-frontend-refresh-services-refresh-page"><p>Refresh service implements a recursive periodical refresh function.
+Provides easy to use simple API to run a function periodically by given interval.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_isstarted">isStarted()</h3>
+<div class="isstarted"><div class="isstarted-page"><p>Returns true if refresh function is running; false if it is not.</p>
+</div><h5 id="methods_isstarted_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="isstarted-page"><ul>
+<li>refresh service to support chaining.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isstopped">isStopped()</h3>
+<div class="isstopped"><div class="isstopped-page"><p>Returns true if refresh function is not running; false if it is.</p>
+</div><h5 id="methods_isstopped_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="isstopped-page"><ul>
+<li>refresh service to support chaining.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setinterval">setInterval(interval)</h3>
+<div class="setinterval"><div class="setinterval-page"><p>Sets interval for refresh timeout which is set 10000 as default.</p>
+</div><h5 id="methods_setinterval_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>interval</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="setinterval-page"><ul>
+<li>Interval in terms of milliseconds.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_setinterval_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setinterval-page"><ul>
+<li>refresh service to support chaining.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_start">start(callback)</h3>
+<div class="start"><div class="start-page"><p>Main method which starts refreshing. Takes callback param that will be run on every period.</p>
+</div><h5 id="methods_start_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="start-page"><ul>
+<li>Callback function to be run periodically.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_start_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="start-page"><ul>
+<li>refresh service to support chaining.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_stop">stop()</h3>
+<div class="stop"><div class="stop-page"><p>Stops refresh function if it is started.</p>
+</div><h5 id="methods_stop_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="stop-page"><ul>
+<li>refresh service to support chaining.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

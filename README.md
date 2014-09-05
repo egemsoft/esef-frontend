@@ -8,19 +8,22 @@ Reuseable Angular JS components. Consists of multiple submodules.
 #Modules
 
  - esef.frontend - Main module that holds everything together.
- - esef.frontend.storage - Key/Value storage service implementing observer pattern.
- - esef.frontend.pagination - Pagination service serving helper methods to structure a pagination.
+ - esef.frontend.storage - Key/Value storage service implementing observer pattern. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.storage.services:storage).
+ - esef.frontend.refresh - Refresh service implementing a recursive method to run a function periodically. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.refresh.services:refresh). :new:
+ - esef.frontend.pagination - Pagination service serving helper methods to structure a pagination. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.pagination.services:pagination).
 
 #Directory Structure
 
 ```
-dist
 ├── bundle
 │   ├── esef-frontend.js
 │   └── esef-frontend.min.js
 ├── pagination
 │   ├── pagination.js
 │   └── pagination.min.js
+├── refresh
+│   ├── refresh.js
+│   └── refresh.min.js
 └── storage
     ├── storage.js
     └── storage.min.js
