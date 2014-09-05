@@ -9,8 +9,9 @@ Reuseable Angular JS components. Consists of multiple submodules.
 
  - esef.frontend - Main module that holds everything together.
  - esef.frontend.storage - Key/Value storage service implementing observer pattern. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.storage.services:storage).
- - esef.frontend.refresh - Refresh service implementing a recursive method to run a function periodically. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.refresh.services:refresh). :new:
  - esef.frontend.pagination - Pagination service serving helper methods to structure a pagination. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.pagination.services:pagination).
+ - esef.frontend.refresh - Refresh service implementing a recursive method to run a function periodically. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.refresh.services:refresh). :new:
+ - esef.frontend.filters - Handy Angular filters. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.filters). :new:
 
 #Directory Structure
 
@@ -18,6 +19,9 @@ Reuseable Angular JS components. Consists of multiple submodules.
 ├── bundle
 │   ├── esef-frontend.js
 │   └── esef-frontend.min.js
+├── filters
+│   ├── filters.js
+│   └── filters.min.js
 ├── pagination
 │   ├── pagination.js
 │   └── pagination.min.js
@@ -48,6 +52,11 @@ All modules will be available by using bundle package located on: `bower_compone
 ###Use Modules
 
 All modules can also be used seperately. These modules are located under `/dist`.
+
+To use filters module:  
+```js
+  angular.module('myApp', ['esef.frontend.filters']);
+```
 
 #Documentation
 
