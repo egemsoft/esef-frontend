@@ -13,5 +13,6 @@
 angular.module('esef.frontend', [
     'esef.frontend.storage',
     'esef.frontend.pagination',
-    'esef.frontend.refresh'
+    'esef.frontend.refresh',
+    'esef.frontend.filters'
   ]);

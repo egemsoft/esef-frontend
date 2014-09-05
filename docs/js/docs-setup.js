@@ -14,6 +14,24 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "esef.frontend.filters",
+      "shortName": "esef.frontend.filters",
+      "type": "overview",
+      "moduleName": "esef.frontend.filters",
+      "shortDescription": "Provides handy filters",
+      "keywords": "api demirbilek esef filters frontend handy overview"
+    },
+    {
+      "section": "api",
+      "id": "esef.frontend.filters.filters:titlecase",
+      "shortName": "titlecase",
+      "type": "filter",
+      "moduleName": "esef.frontend.filters",
+      "shortDescription": "Title case filter. Change text case to title format, first character will be uppercase and the rest will be lowercase.",
+      "keywords": "api case cased change character demirbilek esef filter filters format frontend input lowercase rest result string text title uppercase"
+    },
+    {
+      "section": "api",
       "id": "esef.frontend.pagination",
       "shortName": "esef.frontend.pagination",
       "type": "overview",
