@@ -25,14 +25,10 @@ module.exports = function (grunt) {
           // remove use strict tags
           process: function(src) {
             return src.replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1');
-          },
-          //stripBanners: true
+          }
         },
         files: {
-          '<%= appConfig.dist %>/bundle/esef-frontend.js': ['<%= appConfig.app %>/{,*/}{,scripts/}{,*/}*.js'],
-          '<%= appConfig.dist %>/pagination/pagination.js': ['<%= appConfig.app %>/pagination/{,scripts/}{,*/}*.js'],
-          '<%= appConfig.dist %>/storage/storage.js': ['<%= appConfig.app %>/storage/{,scripts/}{,*/}*.js'],
-          '<%= appConfig.dist %>/refresh/refresh.js': ['<%= appConfig.app %>/refresh/{,scripts/}{,*/}*.js']
+          '<%= appConfig.dist %>/bundle/esef-frontend.js': ['<%= appConfig.app %>/{,*/}/{,scripts/}{,*/}*.js']
         }
       },
       css: {
@@ -107,10 +103,7 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= appConfig.dist %>/bundle/esef-frontend.min.js': ['.tmp/bundle/**.js'],
-          '<%= appConfig.dist %>/storage/storage.min.js': ['.tmp/storage/**.js'],
-          '<%= appConfig.dist %>/pagination/pagination.min.js': ['.tmp/pagination/**.js'],
-          '<%= appConfig.dist %>/refresh/refresh.min.js': ['.tmp/refresh/**.js']
+          '<%= appConfig.dist %>/bundle/esef-frontend.min.js': ['.tmp/bundle/**.js']
         }
       }
     },
@@ -121,8 +114,34 @@ module.exports = function (grunt) {
         title: '<%= appConfig.name %> Documentation'
       },
       all: ['<%= appConfig.app %>/{,*/}{,scripts/}{,*/}*.js']
+    },
+    'folder_list': {
+      options: {
+        files: false,
+        folders: true
+      },
+      files: {
+        src: ['*'],
+        cwd: 'src/',
+        dest: 'modules.json'
+      }
     }
   });
+
+  // set concat and uglify files dynamically
+  (function setModuleTasks() {
+    var modules = grunt.file.readJSON('modules.json');
+    var concatFiles = grunt.config.get('concat.js.files');
+    var uglifyFiles = grunt.config.get('uglify.dist.files');
+
+    modules.forEach(function(module) {
+      concatFiles['<%= appConfig.dist %>/' + module.location + '/' + module.location + '.js'] =  ['<%= appConfig.app %>/' + module.location + '/{,scripts/}{,*/}*.js'];
+      uglifyFiles['<%= appConfig.dist %>/' + module.location + '/' + module.location + '.min.js'] = ['.tmp/' + module.location +'/**.js'];
+    });
+
+    grunt.config.set('concat.js.files', concatFiles);
+    grunt.config.set('uglify.dist.files', uglifyFiles);
+  })();
 
   grunt.registerTask('test', [
     'jshint',
@@ -132,6 +151,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'folder_list',
     'clean:dist',
     'concat:js',
     // 'concat:css',
