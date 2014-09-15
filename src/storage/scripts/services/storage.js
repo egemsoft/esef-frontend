@@ -25,7 +25,7 @@ angular.module('esef.frontend.storage')
        * @function
        */
       store: function(key, newValues) {
-        storage[key] = newValues;
+        storage[key] = angular.copy(newValues);
         // call registered observers
         this.notifyObservers();
         return this;
@@ -44,7 +44,7 @@ angular.module('esef.frontend.storage')
        * @function
        */
       setProperty: function(key, propKey, val) {
-        storage[key][propKey] = val;
+        storage[key][propKey] = angular.copy(val);
         // call registered observers
         this.notifyObservers();
         return this;
@@ -78,7 +78,7 @@ angular.module('esef.frontend.storage')
        * @function
        */
       set: function(newStorage) {
-        storage = newStorage;
+        storage = angular.copy(newStorage);
         this.notifyObservers();
         return this;
       },
@@ -94,7 +94,7 @@ angular.module('esef.frontend.storage')
        * @function
        */
       get: function(key) {
-        return storage[key];
+        return angular.copy(storage[key]);
       },
       
       /**
