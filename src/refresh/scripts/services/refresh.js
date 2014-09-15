@@ -18,12 +18,13 @@ angular.module('esef.frontend.refresh')
 
     // create refresher
     function refresh(refreshCallback) {
-      console.debug('Auto refresh triggered.');
-      refreshCallback();
       // make self call periodically with refresh interval
+      // timeout promise should be updated on top to cancel it inside callback!
       timeoutPromise = $timeout(function() {
         refresh(refreshCallback);
       }, refreshInterval);
+      console.debug('Auto refresh triggered.');
+      refreshCallback();
     }
 
     // public API
