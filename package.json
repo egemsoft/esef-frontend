@@ -1,7 +1,7 @@
 {
-  "name": "angular-aside",
-  "version": "1.0.0",
-  "repository": "https://github.com/dbtek/angular-aside",
+  "name": "esef-frontend",
+  "version": "1.0.2",
+  "repository": "https://github.com/egemsoft/esef-frontend",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.4",

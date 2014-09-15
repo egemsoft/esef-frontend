@@ -19,7 +19,8 @@
     (function() {
       var indexFile = (location.pathname.match(/\/(index[^\.]*\.html)/) || ['', ''])[1],
           rUrl = /(#!\/|api|index[^\.]*\.html).*$/,
-          baseUrl = location.href.replace(rUrl, indexFile),
+          origin = location.origin || (window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '')),
+          baseUrl = origin + location.href.substr(origin.length).replace(rUrl, indexFile),
           headEl = document.getElementsByTagName('head')[0],
           sync = true;
 
