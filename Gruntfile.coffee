@@ -90,7 +90,7 @@ module.exports = (grunt) ->
         configFile: 'karma.conf.js'
         singleRun: true
     
-    ngmin:
+    ngAnnotate:
       dist:
         files: [
           expand: true,
@@ -155,7 +155,7 @@ module.exports = (grunt) ->
     'clean:dist'
     'concat:js'
     # 'concat:css'
-    'ngmin'
+    'ngAnnotate'
     # 'cssmin'
     'uglify'
     'ngdocs'
