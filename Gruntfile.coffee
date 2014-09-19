@@ -152,6 +152,7 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'test', [
+    'coffee:test',
     'jshint',
     'clean:server',
     'connect:test',

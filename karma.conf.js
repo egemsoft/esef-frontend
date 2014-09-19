@@ -16,7 +16,7 @@ module.exports = function (config) {
           'src/*.js',
           'src/*/scripts/*.js',
           'src/*/scripts/**/*.js',
-          'test/spec/**/*.js'
+          'test/*/spec/**/*.js'
         ],
 
         // code coverage
