@@ -31,6 +31,14 @@ module.exports = (grunt) ->
             ' * Copyright (c) <%= grunt.template.today("yyyy") %> Egemsoft\n' +
             ' * License: <%= pkg.license %>\n' +
             ' */\n'
+
+    coffee:
+      test:
+        files: [
+          expand: true
+          src: ['test/coffee/**/*.coffee']
+          ext: '.js'
+        ]
     
     concat:
       js:

@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "repository": "https://github.com/egemsoft/esef-frontend",
   "dependencies": {
+    "grunt-contrib-coffee": "^0.11.1",
     "grunt-ng-annotate": "^0.4.0"
   },
   "devDependencies": {
