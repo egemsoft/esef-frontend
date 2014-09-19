@@ -23,7 +23,7 @@
     "test",
     "tests",
     "src",
-    "Gruntfile.js",
+    "Gruntfile.coffee",
     "karma.conf.js",
     "package.json"
   ],
