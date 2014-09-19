@@ -40,7 +40,7 @@ angular.module 'esef.frontend.pagination'
        * @function
       ###
       getNumberOfPages: (size, count) ->
-        pages = parseInt(count / size)
+        pages = Math.ceil count / size
         if pages is 0
           pages+1
         pages
