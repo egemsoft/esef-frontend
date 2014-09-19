@@ -125,20 +125,21 @@ module.exports = (grunt) ->
     # generate modules.json with directories inside src
     
     # read generated modules list
-    modules = grunt.file.readJSON 'modules.json'
+    modules     = grunt.file.readJSON 'modules.json'
     concatFiles = grunt.config.get 'concat.js.files'
     uglifyFiles = grunt.config.get 'uglify.dist.files'
 
-    modules.forEach module ->
-      concatFiles['<%= appConfig.dist %>/' + module.location + '/' + module.location + '.js'] =  ['<%= appConfig.app %>/' + module.location + '/{,scripts/}{,*/}*.js']
-      uglifyFiles['<%= appConfig.dist %>/' + module.location + '/' + module.location + '.min.js'] = ['.tmp/' + module.location +'/**.js']
+    for module in modules
+      do (module) ->
+        concatFiles["<%= appConfig.dist %>/#{ module.location }/#{ module.location }.js"]     =  ["<%= appConfig.app %>/#{ module.location }/{,scripts/}{,*/}*.js"]
+        uglifyFiles["<%= appConfig.dist %>/#{ module.location }/#{ module.location }.min.js"] = [".tmp/#{ module.location }/**.js"]
 
-    grunt.config.set 'concat.js.files', concatFiles
-    grunt.config.set 'uglify.dist.files', uglifyFiles
+        grunt.config.set 'concat.js.files', concatFiles
+        grunt.config.set 'uglify.dist.files', uglifyFiles
 
   # Scan directories and explore submodules
   grunt.registerTask 'prepareBuild', [
-    'folder_list',
+    'folder_list'
     'setConfigsForSubmodules'
   ]
 
