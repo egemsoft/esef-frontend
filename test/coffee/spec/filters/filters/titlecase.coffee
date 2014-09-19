@@ -11,5 +11,4 @@ describe 'esef.frontend.filters test service: filters', () ->
     expect(!!filter 'titlecase').toBe true
 
   it 'should change case to title format properly', ->
-    caseFilter = filter 'titlecase'
-    expect(caseFilter 'tEst CaSe').toBe 'Test case'
+    expect(filter('titlecase') 'tEst CaSe').toBe 'Test case'
