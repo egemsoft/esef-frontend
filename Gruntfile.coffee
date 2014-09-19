@@ -37,7 +37,7 @@ module.exports = (grunt) ->
         options:
           bare: true
         expand: true
-        src: ['<%= appConfig.app %>/*/coffee/{,*/}*.coffee']
+        src: ['<%= appConfig.app %>/*.coffee', '<%= appConfig.app %>/*/coffee/{,*/}*.coffee']
         ext: '.js'
       test:
         options:
@@ -88,7 +88,7 @@ module.exports = (grunt) ->
         jshintrc: '.jshintrc'
       all: [
         'Gruntfile.js'
-        '<%= appConfig.app %>/{,*/}scripts/{,*/}*.js'
+        '<%= appConfig.app %>/{,*/}{,*/}{,*/}*.js'
       ]
 
     cssmin:
