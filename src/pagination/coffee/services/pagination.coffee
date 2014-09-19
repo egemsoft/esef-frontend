@@ -81,7 +81,7 @@ angular.module 'esef.frontend.pagination'
         if currentPage < paginationOffset + 1
           paginationOffset = paginationOffset + (paginationOffset - currentPage)
         else if totalPages - currentPage < paginationOffset + 1
-          paginationOffset = paginationOffset + (paginationOffset - (totalPages - currentPage))
+          paginationOffset = paginationOffset + (paginationOffset - (totalPages - currentPage)) + 1
         
         if currentPage - paginationOffset > 0
           start  = currentPage - paginationOffset
