@@ -18,12 +18,12 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'bower.json'
-    
+
     appConfig:
       app: 'src'
       name: 'Esef Frontend'
       dist: 'dist'
-    
+
     banner: '/*!\n' +
             ' * <%= pkg.name %> - v<%= pkg.version %>\n' +
             ' * <%= pkg.homepage %>\n' +
@@ -33,13 +33,19 @@ module.exports = (grunt) ->
             ' */\n'
 
     coffee:
+      app:
+        options:
+          bare: true
+        expand: true
+        src: ['<%= appConfig.app %>/*/coffee/{,*/}*.coffee']
+        ext: '.js'
       test:
-        files: [
-          expand: true
-          src: ['test/coffee/**/*.coffee']
-          ext: '.js'
-        ]
-    
+        options:
+          bare: true
+        expand: true
+        src: ['test/coffee/**/*.coffee']
+        ext: '.js'
+
     concat:
       js:
         options:
@@ -48,13 +54,13 @@ module.exports = (grunt) ->
           process: (src) ->
             src.replace /(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1'
         files:
-          '<%= appConfig.dist %>/bundle/esef-frontend.js': ['<%= appConfig.app %>/{,*/}/{,scripts/}{,*/}*.js']
+          '<%= appConfig.dist %>/bundle/esef-frontend.js': ['<%= appConfig.app %>/{,*/}/{,scripts?coffee/}{,*/}*.js']
       css:
         options:
           banner: '<%= banner %>\n'
         files:
           '<%= appConfig.dist %>/bundle/esef-frontend.css': ['<%= appConfig.app %>/{,*/}styles/{,*/}*.css']
-    
+
     connect:
       test:
         options:
@@ -64,7 +70,7 @@ module.exports = (grunt) ->
             'test'
             '<%= appConfig.app %>'
           ]
-    
+
     clean:
       dist:
         files: [
@@ -76,7 +82,7 @@ module.exports = (grunt) ->
           ]
         ]
       server: '.tmp'
-    
+
     jshint:
       options:
         jshintrc: '.jshintrc'
@@ -84,7 +90,7 @@ module.exports = (grunt) ->
         'Gruntfile.js'
         '<%= appConfig.app %>/{,*/}scripts/{,*/}*.js'
       ]
-    
+
     cssmin:
       dist:
         files:
@@ -92,12 +98,12 @@ module.exports = (grunt) ->
             '.tmp/styles/{,*/}*.css'
             '<%= appConfig.app %>/{,*/}styles/{,*/}*.css'
           ]
-    
+
     karma:
       unit:
         configFile: 'karma.conf.js'
         singleRun: true
-    
+
     ngAnnotate:
       dist:
         files: [
@@ -106,19 +112,19 @@ module.exports = (grunt) ->
           src: '{,*/}*.js'
           dest: '.tmp'
         ]
-    
+
     uglify:
       dist:
         files:
           '<%= appConfig.dist %>/bundle/esef-frontend.min.js': ['.tmp/bundle/**.js']
-    
+
     ngdocs:
       options:
         dest: 'docs'
         html5Mode: false
         title: '<%= appConfig.name %> Documentation'
-      all: ['<%= appConfig.app %>/{,*/}{,scripts/}{,*/}*.js']
-    
+      all: ['<%= appConfig.app %>/{,*/}{,scripts?coffee/}{,*/}*.js']
+
     'folder_list':
       options:
         files: false
@@ -131,7 +137,7 @@ module.exports = (grunt) ->
   # set concat and uglify files configs dynamically
   grunt.registerTask 'setConfigsForSubmodules', () ->
     # generate modules.json with directories inside src
-    
+
     # read generated modules list
     modules     = grunt.file.readJSON 'modules.json'
     concatFiles = grunt.config.get 'concat.js.files'
@@ -139,7 +145,7 @@ module.exports = (grunt) ->
 
     for module in modules
       do (module) ->
-        concatFiles["<%= appConfig.dist %>/#{ module.location }/#{ module.location }.js"]     =  ["<%= appConfig.app %>/#{ module.location }/{,scripts/}{,*/}*.js"]
+        concatFiles["<%= appConfig.dist %>/#{ module.location }/#{ module.location }.js"]     =  ["<%= appConfig.app %>/#{ module.location }/{,scripts?coffee/}{,*/}*.js"]
         uglifyFiles["<%= appConfig.dist %>/#{ module.location }/#{ module.location }.min.js"] = [".tmp/#{ module.location }/**.js"]
 
         grunt.config.set 'concat.js.files', concatFiles
@@ -160,6 +166,7 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'build', [
+    'coffee:app'
     'prepareBuild'
     'clean:dist'
     'concat:js'
@@ -171,6 +178,7 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'default', [
+    'coffee'
     'test'
     'build'
   ]

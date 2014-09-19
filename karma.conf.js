@@ -16,6 +16,8 @@ module.exports = function (config) {
           'src/*.js',
           'src/*/scripts/*.js',
           'src/*/scripts/**/*.js',
+          'src/*/coffee/*.js',
+          'src/*/coffee/**/*.js',
           'test/*/spec/**/*.js'
         ],
 
