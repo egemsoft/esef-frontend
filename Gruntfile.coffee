@@ -54,7 +54,7 @@ module.exports = (grunt) ->
           process: (src) ->
             src.replace /(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1'
         files:
-          '<%= appConfig.dist %>/bundle/esef-frontend.js': ['<%= appConfig.app %>/{,*/}/{,scripts?coffee/}{,*/}*.js']
+          '<%= appConfig.dist %>/bundle/esef-frontend.js': ['<%= appConfig.app %>/{,*/}/{,*/}{,*/}*.js']
       css:
         options:
           banner: '<%= banner %>\n'
@@ -123,7 +123,7 @@ module.exports = (grunt) ->
         dest: 'docs'
         html5Mode: false
         title: '<%= appConfig.name %> Documentation'
-      all: ['<%= appConfig.app %>/{,*/}{,scripts?coffee/}{,*/}*.js']
+      all: ['<%= appConfig.app %>/{,*/}{,*/}{,*/}*.js']
 
     'folder_list':
       options:
@@ -145,7 +145,7 @@ module.exports = (grunt) ->
 
     for module in modules
       do (module) ->
-        concatFiles["<%= appConfig.dist %>/#{ module.location }/#{ module.location }.js"]     =  ["<%= appConfig.app %>/#{ module.location }/{,scripts?coffee/}{,*/}*.js"]
+        concatFiles["<%= appConfig.dist %>/#{ module.location }/#{ module.location }.js"]     =  ["<%= appConfig.app %>/#{ module.location }/{,*/}{,*/}*.js"]
         uglifyFiles["<%= appConfig.dist %>/#{ module.location }/#{ module.location }.min.js"] = [".tmp/#{ module.location }/**.js"]
 
         grunt.config.set 'concat.js.files', concatFiles
