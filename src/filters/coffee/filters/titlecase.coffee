@@ -13,6 +13,6 @@
 angular.module 'esef.frontend.filters'
   .filter 'titlecase', ->
     (text) ->
-      text = '' if not text?
+      text = '' if text is null or text is undefined
       lowercased = text.toString().toLocaleLowerCase()
       lowercased[0].toLocaleUpperCase().concat lowercased.substr 1,lowercased.length-1

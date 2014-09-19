@@ -42,7 +42,7 @@ angular.module 'esef.frontend.pagination'
       getNumberOfPages: (size, count) ->
         pages = Math.ceil count / size
         if pages is 0
-          pages+1
+          pages++
         pages
 
       ###*
@@ -61,7 +61,7 @@ angular.module 'esef.frontend.pagination'
         currentPage = (offset / size) + 1
         if currentPage > totalPages
           totalPages
-        currentPage
+        else currentPage
 
       ###*
        * @ngdoc object
