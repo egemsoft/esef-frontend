@@ -38,13 +38,13 @@ module.exports = (grunt) ->
           bare: true
         expand: true
         src: ['<%= appConfig.app %>/*.coffee', '<%= appConfig.app %>/*/coffee/{,*/}*.coffee']
-        ext: '.js'
+        ext: '.compiled.js'
       test:
         options:
           bare: true
         expand: true
         src: ['test/coffee/**/*.coffee']
-        ext: '.js'
+        ext: '.compiled.js'
 
     concat:
       js:
@@ -73,13 +73,17 @@ module.exports = (grunt) ->
 
     clean:
       dist:
-        files: [
-          dot: true
-          src: [
-            '.tmp'
-            '<%= appConfig.dist %>/*'
-            '!<%= appConfig.dist %>/.git*'
-          ]
+        dot: true
+        src: [
+          '.tmp'
+          '<%= appConfig.dist %>/*'
+          '!<%= appConfig.dist %>/.git*'
+        ]
+      coffee:
+        src: [
+          '<%= appConfig.app %>/app.compiled.js',
+          '<%= appConfig.app %>/*/coffee/{,*/}*.compiled.js'
+          'test/coffee/{,*/}{,*/}{,*/}*.compiled.js'
         ]
       server: '.tmp'
 
@@ -180,5 +184,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', [
     'coffee'
     'test'
-    'build'
+    'build',
+    'clean:coffee'
   ]
