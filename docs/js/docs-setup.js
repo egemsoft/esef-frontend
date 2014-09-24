@@ -46,7 +46,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "esef.frontend.pagination",
       "shortDescription": "Pagination helper service. Makes calculations for current page, offset fix, number of pages and displayed page numbers.",
-      "keywords": "active api array calculates calculations constructs count current currentpage data demirbilek displayed entries esef fixed fixes frontend getcurrentpage getfixedoffset getnumberofpages getpages helper left number numbers object offfset offset pagination paginationoffset returns service services size total totalpages"
+      "keywords": "active api array calculates calculations constructs count current currentpage data demirbilek displayed entries esef fixed fixes frontend getcurrentpage getfixedoffset getnumberofpages getpages helper left number numbers object offset pagination paginationoffset returns service services size total totalpages"
     },
     {
       "section": "api",
