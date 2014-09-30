@@ -12,6 +12,7 @@ Reuseable Angular JS components. Consists of multiple submodules.
  - esef.frontend.pagination - Pagination service serving helper methods to structure a pagination. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.pagination.services:pagination).
  - esef.frontend.refresh - Refresh service implementing a recursive method to run a function periodically. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.refresh.services:refresh). :new:
  - esef.frontend.filters - Handy Angular filters. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.filters). :new:
+  - esef.frontend.notification - Notification and dialog helpers. [See docs](https://rawgit.com/egemsoft/esef-frontend/master/docs/index.html#/api/esef.frontend.notification). :new:
 
 #Directory Structure
 
@@ -22,6 +23,9 @@ Reuseable Angular JS components. Consists of multiple submodules.
 ├── filters
 │   ├── filters.js
 │   └── filters.min.js
+├── notification
+│   ├── notification.js
+│   └── notification.min.js
 ├── pagination
 │   ├── pagination.js
 │   └── pagination.min.js
