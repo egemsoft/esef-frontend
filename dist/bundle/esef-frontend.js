@@ -74,7 +74,7 @@ angular.module('esef.frontend.notification', ['ui.bootstrap.modal'])
 }]);
 /**
  * @ngdoc service
- * @name esef.frontend.notification:services.esefNotify
+ * @name esef.frontend.notification.services:esefNotify
  * @description
  * Dialog and notification services.
  * @function
@@ -84,7 +84,8 @@ angular.module('esef.frontend.notification')
 		return {
 			/**
 			 * @ngdoc object
-			 * @methodOf esef.frontend.notification:services.esefNotify
+			 * @name confirm
+			 * @methodOf esef.frontend.notification.services:esefNotify
 			 * @param {string} title	 - Confirm dialog title.
 			 * @param {string} message - Confirm dialog body message.
 			 * @return {object}        - Modal instance result (promise) to be resolved with confirm status (true | false).
