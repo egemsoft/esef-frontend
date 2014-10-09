@@ -1,0 +1,39 @@
+<html ng-app="sfFrontendDemo">
+	<head>
+		<title>Esef Frontend Demo</title>
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+	</head>
+	<body ng-controller="MainCtrl" class="container">
+		<h1>Esef Frontend Demo</h1>
+		<div>
+			<h4>Esef Notification</h4>
+			<form role="form" class="col-sm-6">
+			  <div class="form-group">
+			    <label>Title</label>
+					<input type="text" class="form-control" placeholder="Title" ng-model="confirmTitle">
+			  </div>
+			  <div class="form-group">
+			    <label>Message</label>
+					<textarea class="form-control" placeholder="Body" ng-model="confirmBody"></textarea>
+			  </div>
+				<button class="btn btn-default" type="button" ng-click="confirm()">Confirm Dialog</button>
+			</form>
+		</div>
+	</body>
+	<script src="../../bower_components/angular/angular.min.js"></script>
+	<script src="../../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="../../dist/bundle/esef-frontend.min.js"></script>
+	<script>
+		angular.module('sfFrontendDemo', ['ui.bootstrap', 'esef.frontend.notification'])
+			.controller('MainCtrl', function($scope, esefNotify) {
+				$scope.confirmTitle = 'Confirm Dialog';
+				$scope.confirmBody = 'This is a confirm dialog!';
+				$scope.confirm = function() {
+					esefNotify.confirm($scope.confirmTitle, $scope.confirmBody)
+						.then(function(result) {
+							alert('You have clicked ' + (result ? 'yes' : 'cancel'));
+						});
+				}
+			});
+	</script>
+</html>
