@@ -25,7 +25,8 @@
     "src",
     "Gruntfile.coffee",
     "karma.conf.js",
-    "package.json"
+    "package.json",
+    "docs"
   ],
   "dependencies": {
     "angular": "~1.2.23",
