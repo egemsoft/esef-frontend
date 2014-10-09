@@ -2,7 +2,7 @@
 /*!
  * esef-frontend - v1.0.2
  * https://github.com/egemsoft/esef-frontend
- * 2014-09-30
+ * 2014-10-09
  * Copyright (c) 2014 Egemsoft
  * License: MIT
  */
@@ -33,8 +33,8 @@ angular.module('esef.frontend.refresh').factory('refresh', function($timeout) {
   working = false;
   refresh = function(refreshCallback) {
     timeoutPromise = $timeout(function() {
-      return refresh(refreshCallback, refreshInterval);
-    });
+      return refresh(refreshCallback);
+    }, refreshInterval);
     console.debug('Auto refresh triggered.');
     return refreshCallback();
   };

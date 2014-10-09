@@ -32,24 +32,6 @@ NG_DOCS={
     },
     {
       "section": "api",
-      "id": "esef.frontend.notification",
-      "shortName": "esef.frontend.notification",
-      "type": "overview",
-      "moduleName": "esef.frontend.notification",
-      "shortDescription": "Dialog and notification services.",
-      "keywords": "api dialog esef frontend notification overview services"
-    },
-    {
-      "section": "api",
-      "id": "esef.frontend.notification.services:esefNotify",
-      "shortName": "esefNotify",
-      "type": "service",
-      "moduleName": "esef.frontend.notification",
-      "shortDescription": "Dialog and notification services.",
-      "keywords": "api body confirm creates dialog esef false frontend instance message modal notification object opens resolved result returns service services status title ui-bootstrap"
-    },
-    {
-      "section": "api",
       "id": "esef.frontend.pagination",
       "shortName": "esef.frontend.pagination",
       "type": "overview",
