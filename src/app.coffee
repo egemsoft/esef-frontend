@@ -15,4 +15,5 @@ angular.module 'esef.frontend', [
     'esef.frontend.pagination'
     'esef.frontend.refresh'
     'esef.frontend.filters'
+    'esef.frontend.notification'
   ]

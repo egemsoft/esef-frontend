@@ -17,7 +17,7 @@
  * @function
  * @author İsmail Demirbilek
  */
-angular.module('esef.frontend', ['esef.frontend.storage', 'esef.frontend.pagination', 'esef.frontend.refresh', 'esef.frontend.filters']);
+angular.module('esef.frontend', ['esef.frontend.storage', 'esef.frontend.pagination', 'esef.frontend.refresh', 'esef.frontend.filters', 'esef.frontend.notification']);
 
 /**
  * @ngdoc overview
