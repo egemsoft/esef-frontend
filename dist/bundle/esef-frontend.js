@@ -1,6 +1,6 @@
 'use strict';
 /*!
- * esef-frontend - v1.0.2
+ * esef-frontend - v1.0.4
  * https://github.com/egemsoft/esef-frontend
  * 2014-10-09
  * Copyright (c) 2014 Egemsoft
