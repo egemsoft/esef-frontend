@@ -2,7 +2,7 @@
 /*!
  * esef-frontend - v1.0.4
  * https://github.com/egemsoft/esef-frontend
- * 2014-10-09
+ * 2014-10-28
  * Copyright (c) 2014 Egemsoft
  * License: MIT
  */

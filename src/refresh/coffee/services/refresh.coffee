@@ -82,7 +82,7 @@ angular.module 'esef.frontend.refresh'
      * @ngdoc object
      * @name isStarted
      * @methodOf esef.frontend.refresh.services:refresh
-     * @returns {object}        - refresh service to support chaining.
+     * @returns {object}        - Refresh status true if it is started.
      * @description
      * Returns true if refresh function is running; false if it is not.
      * @function
@@ -93,7 +93,7 @@ angular.module 'esef.frontend.refresh'
      * @ngdoc object
      * @name isStopped
      * @methodOf esef.frontend.refresh.services:refresh
-     * @returns {object}        - refresh service to support chaining.
+     * @returns {object}        - Refresh status true if it is stopped.
      * @description
      * Returns true if refresh function is not running; false if it is.
      * @function

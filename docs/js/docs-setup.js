@@ -82,7 +82,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "esef.frontend.refresh",
       "shortDescription": "Refresh service implements a recursive periodical refresh function.",
-      "keywords": "api callback chaining default demirbilek easy esef false frontend function implements interval isstarted isstopped main method milliseconds object param period periodical periodically recursive refresh refreshing returns running service services set setinterval sets simple start started starts stops support takes terms timeout true"
+      "keywords": "api callback chaining default demirbilek easy esef false frontend function implements interval isstarted isstopped main method milliseconds object param period periodical periodically recursive refresh refreshing returns running service services set setinterval sets simple start started starts status stopped stops support takes terms timeout true"
     },
     {
       "section": "api",
