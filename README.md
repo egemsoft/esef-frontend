@@ -1,4 +1,4 @@
-Esef Frontend
+Esef Frontend ![bower version](http://img.shields.io/bower/v/esef-frontend.svg)
 -------------
 
 Reuseable Angular JS components. Consists of multiple submodules.
