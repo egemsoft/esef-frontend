@@ -1,6 +1,6 @@
 {
   "name": "esef-frontend",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "homepage": "https://github.com/egemsoft/esef-frontend",
   "author": {
     "name": "İsmail Demirbilek",
@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "angular": "~1.2.23",
-    "angular-bootstrap": "0.11.0"
+    "angular-bootstrap": "~0.12.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.23"

@@ -1,8 +1,8 @@
 'use strict';
 /*!
- * esef-frontend - v1.0.4
+ * esef-frontend - v1.0.5
  * https://github.com/egemsoft/esef-frontend
- * 2014-10-28
+ * 2014-12-19
  * Copyright (c) 2014 Egemsoft
  * License: MIT
  */
