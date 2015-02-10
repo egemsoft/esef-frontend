@@ -46,7 +46,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "esef.frontend.notification",
       "shortDescription": "Dialog and notification services.",
-      "keywords": "api body confirm creates dialog esef false frontend instance message modal notification object opens resolved result returns service services status title ui-bootstrap"
+      "keywords": "api body cancellabel confirm creates dialog esef false frontend includes instance message modal notification object opens options resolved result returns service services status title ui-bootstrap yeslabel"
     },
     {
       "section": "api",

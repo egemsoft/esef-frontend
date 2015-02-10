@@ -1,9 +1,9 @@
 'use strict';
 /*!
- * esef-frontend - v1.0.5
+ * esef-frontend - v1.0.6
  * https://github.com/egemsoft/esef-frontend
- * 2014-12-19
- * Copyright (c) 2014 Egemsoft
+ * 2015-02-10
+ * Copyright (c) 2015 Egemsoft
  * License: MIT
  */
 
@@ -16,7 +16,7 @@
  */
 angular.module('esef.frontend.notification', ['ui.bootstrap.modal']).run([
   '$templateCache', function($templateCache) {
-    return $templateCache.put('notification/views/confirm-dialog.html', '<div class="modal-body"> <h4 class="modal-title"> <i class="fa fa-comment"></i> {{ title }} </h4> <hr/> <p translate>{{ message }}</p> <div class="text-right"> <button type="button" class="btn btn-default" ng-click="$close(false)">Cancel</button> <button type="button" class="btn btn-danger" ng-click="$close(true)">Yes</button> </div> </div>');
+    return $templateCache.put('notification/views/confirm-dialog.html', '<div class="modal-body"> <h4 class="modal-title"> <i class="fa fa-comment"></i> {{ title }} </h4> <hr/> <p translate>{{ message }}</p> <div class="text-right"> <button type="button" class="btn btn-default" ng-click="$close(false)">{{ options.cancelLabel }}</button> <button type="button" class="btn btn-danger" ng-click="$close(true)">{{ options.yesLabel }}</button> </div> </div>');
   }
 ]);
 
@@ -34,20 +34,25 @@ angular.module('esef.frontend.notification').factory('esefNotify', function($mod
      * @ngdoc object
      * @name confirm
      * @methodOf esef.frontend.notification.services:esefNotify
-     * @param {string} title   - Confirm dialog title.
-     * @param {string} message - Confirm dialog body message.
-     * @return {object}        - Modal instance result (promise) to be resolved with confirm status (true | false).
+     * @param {string} title    - Confirm dialog title.
+     * @param {string} message  - Confirm dialog body message.
+     * @param {string=} options - Confirm dialog options. Includes `yesLabel` and 'cancelLabel'.
+     * @return {object}         - Modal instance result (promise) to be resolved with confirm status (true | false).
      * @description
      * Creates a confirm dialog with ui-bootstrap's modal, opens it and returns its' instance result.
      * @function
      */
-    confirm: function(title, message) {
+    confirm: function(title, message, options) {
       return $modal.open({
         templateUrl: 'notification/views/confirm-dialog.html',
         size: 'sm',
-        controller: function($scope, title, message) {
+        controller: function($scope, title, message, options) {
           $scope.title = title;
           $scope.message = message;
+          $scope.options = angular.extend({
+            yesLabel: 'Yes',
+            cancelLabel: 'Cancel'
+          }, options);
           return null;
         },
         resolve: {
@@ -56,6 +61,9 @@ angular.module('esef.frontend.notification').factory('esefNotify', function($mod
           },
           message: function() {
             return message;
+          },
+          options: function() {
+            return options;
           }
         }
       }).result;
