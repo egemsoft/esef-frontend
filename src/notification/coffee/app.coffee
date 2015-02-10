@@ -17,8 +17,8 @@ angular.module 'esef.frontend.notification', ['ui.bootstrap.modal']
     <hr/>
     <p translate>{{ message }}</p>
     <div class="text-right">
-      <button type="button" class="btn btn-default" ng-click="$close(false)">Cancel</button>
-      <button type="button" class="btn btn-danger" ng-click="$close(true)">Yes</button>
+      <button type="button" class="btn btn-default" ng-click="$close(false)">{{ options.cancelLabel }}</button>
+      <button type="button" class="btn btn-danger" ng-click="$close(true)">{{ options.yesLabel }}</button>
     </div>
   </div>'
 ])
