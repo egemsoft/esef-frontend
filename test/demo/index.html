@@ -16,6 +16,14 @@
 			    <label>Message</label>
 					<textarea class="form-control" placeholder="Body" ng-model="confirmBody"></textarea>
 			  </div>
+         <div class="form-group">
+          <label>Yes Label</label>
+          <input type="text" class="form-control" placeholder="Title" ng-model="yesLabel">
+        </div>
+         <div class="form-group">
+          <label>Cancel Label</label>
+          <input type="text" class="form-control" placeholder="Title" ng-model="cancelLabel">
+        </div>
 				<button class="btn btn-default" type="button" ng-click="confirm()">Confirm Dialog</button>
 			</form>
 		</div>
@@ -28,8 +36,13 @@
 			.controller('MainCtrl', function($scope, esefNotify) {
 				$scope.confirmTitle = 'Confirm Dialog';
 				$scope.confirmBody = 'This is a confirm dialog!';
+				$scope.yesLabel = 'Yes';
+				$scope.cancelLabel = 'Cancel';
 				$scope.confirm = function() {
-					esefNotify.confirm($scope.confirmTitle, $scope.confirmBody)
+					esefNotify.confirm($scope.confirmTitle, $scope.confirmBody, {
+              yesLabel: $scope.yesLabel,
+              cancelLabel: $scope.cancelLabel
+            })
 						.then(function(result) {
 							alert('You have clicked ' + (result ? 'yes' : 'cancel'));
 						});
